@@ -52,3 +52,45 @@ cd <component or topology>
 make # To re-generate autocode output and build code
 make rebuild # To clean, generate make system, and build code
 ```
+
+## Build Commands Raspberry PI
+
+Once the user has a complete deployment ready for running on the raspberry PI, the following command can be used to rebuild 
+and generate a binary ready to run on the Raspberry PI. It is recommended to always rebuild completely for this stage. 
+
+```
+cd <raspberry PI deployment dir>
+make rebuild_rpi_cross
+```
+
+**Note:** this performs a cross-compile for the raspberry PI's architecture.
+
+## Other Raspberry PI Commands
+
+This section includes command useful for interacting with the Raspberry PI for the purposes of the FSW workshop.
+
+### Copying the Binary to the Rasbperry PI
+
+Copying the binary to the raspberry pi can be done via the `scp` command. It depends on the user having built the deployment
+using the `make rebuild_rpi_cross` command above.
+
+```
+cd <raspberry PI deployment dir>
+cp ./raspian-raspian-arm-debug-gnu-bin/<deployment name> pi@<team's pi IP>:
+```
+
+### Running Against the F Prime Ground System
+
+Running the RPI app against thr ground system requires starting the ground system at a know network location, and pointing
+the binary at that ground system.
+
+**On Development PC**
+```
+cd fprime/RPI
+./scripts/run_rpi_cross.sh --dictionary <path-to-deployment>/py_dict -p <team's port>
+```
+
+**On Raspbery PI Via SSH
+```
+./<deployment name> -a 192.168.2.2 -p <team's port>
+```
