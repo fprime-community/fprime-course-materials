@@ -94,6 +94,20 @@ scp test/ut/raspian-raspian-arm-debug-gnu-bin/test_ut pi@<team's RPI IP>:
 ssh pi@<team's RPI IP> "./test_ut"
 ```
 
+**Note:** `ut_raspian_cross` is a custom target. It must be added to the component's make file as follows.
+
+**Makefile**
+```
+...
+...
+ut_raspian_cross:
+        @$(TIME) $(MAKE) -f $(BUILD_ROOT)/mk/makefiles/Makefile COMP=gcc-cross BUILD=RASPIAN test_$(MODULE)testut
+        
+ut_raspian_cross_clean:
+        @$(TIME) $(MAKE) -f $(BUILD_ROOT)/mk/makefiles/Makefile COMP=gcc-cross BUILD=RASPIAN test_$(MODULE)testut_clean
+
+```
+
 ## Other Raspberry PI Commands
 
 This section includes command useful for interacting with the Raspberry PI for the purposes of the FSW workshop.
