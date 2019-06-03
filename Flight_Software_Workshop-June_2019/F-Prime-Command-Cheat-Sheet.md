@@ -55,6 +55,18 @@ make # To re-generate autocode output and build code
 make rebuild # To clean, generate make system, and build code
 ```
 
+### Building and Running UTs
+
+To build and run unit tests, the user can run the following commands in a component directory.
+
+```
+cd <component directory>
+make ut
+make run_ut
+```
+
+**Note:** some UTs need to be made for the Raspberry PI, and uploaded to the pi to run. These commands work for the UTs designed for Linux.
+
 ## Build Commands Raspberry PI
 
 Once the user has a complete deployment ready for running on the raspberry PI, the following command can be used to rebuild 
@@ -96,7 +108,7 @@ cd fprime/RPI
 ./scripts/run_rpi_cross.sh --dictionary <path-to-deployment>/py_dict -p <team's port>
 ```
 
-**On Raspbery PI Via SSH
+**On Raspbery PI Via SSH**
 ```
 ./<deployment name> -a 192.168.2.2 -p <team's port>
 ```
