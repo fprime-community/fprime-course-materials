@@ -32,7 +32,7 @@ Point vnc at the following address to use VNC on the gateway computer:
 
 | | |
 |---|---|
-| **VNC URL | 192.168.2.2:## (see VNC Display below for ##) |
+| **VNC URL** | 192.168.2.2:## (see VNC Display below for ##) |
 
 ## Raspberry Pi
 
@@ -42,7 +42,7 @@ class via Ethernet.
 | | |
 |---|---|
 | **PI User** | pi |
-| **PI Password | fpclass2019 |
+| **PI Password** | fpclass2019 |
 
 
 ### SSH
