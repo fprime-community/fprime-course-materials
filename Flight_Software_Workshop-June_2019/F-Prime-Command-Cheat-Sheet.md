@@ -21,7 +21,7 @@ make gen_make
 
 When implementing components, templates can be generated to ease development. The following command can be run from any component
 directory where the *Ai.xml* has been added to the `mod.mk` of the component and `make gen_make` has been rerun.  This command will
-output *MODULE.cpp_template* and *MODULE.hpp_template* files in the directory. These can be filled in by the developer.
+output *MODULE.cpp_template* and *MODULE.hpp_template* files in the directory. These can be copied to new files and filled in by the developer.
 
 ```
 cd <component directory>
@@ -37,6 +37,8 @@ tunning the command below. It has the same requirments as the `make impl` comman
 cd <component directory>
 make testcomp
 ```
+
+Once these files are generated, create a `test/ut` directory under the comnponent directory and copy them there. Fill out the `mod.mk` files according to the user's guide, then compile and run the unit test.
 
 ## Build Commands for Linux
 
@@ -61,6 +63,10 @@ and generate a binary ready to run on the Raspberry PI. It is recommended to alw
 ```
 cd <raspberry PI deployment dir>
 make rebuild_rpi_cross
+```
+Once the code is rebuilt, it can be incrementally built with:
+```
+make rpi_cross
 ```
 
 **Note:** this performs a cross-compile for the raspberry PI's architecture.
