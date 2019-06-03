@@ -1,0 +1,54 @@
+# F Prime Command Cheat Sheet
+
+This is intended to be q quick reference for F prime commands needed for completeing the FSW workshop.  Further commands can be found
+in the F prime documentation and raspberry PI example.
+
+## Setup and Implementation Commands
+
+This section will cover commands that help setup the F prime build system, setup a new F prime module, and aid in implementation of F
+prime components.
+
+### Setup/Refresh Make System
+
+When a new module is created, has a `mod.mk` and `Maakefile`, and has been added to `mk/config/modules.modules.mk` the build system needs
+to be regenerated. This is done with the following command run from any directory that has a `mod.mk` and `Makefile` specified.
+
+```
+make gen_make
+```
+
+### Make Implementation Templates
+
+When implementing components, templates can be generated to ease development. The following command can be run from any component
+directory where the *Ai.xml* has been added to the `mod.mk` of the component and `make gen_make` has been rerun.  This command will
+output *MODULE.cpp_template* and *MODULE.hpp_template* files in the directory. These can be filled in by the developer.
+
+```
+cd <component directory>
+make impl
+```
+
+### Make Unit Test Files
+
+Like the `make impl` command above, it is nice to be able to auto-generate the files required for unit testing. This can be done by
+tunning the command below. It has the same requirments as the `make impl` command above.
+
+```
+cd <component directory>
+make testcomp
+```
+
+## Build Commands for Linux
+
+This section describes the commands used to build on linux. This is useful for development.
+
+### Building and Rebuilding
+
+These two commands can be used in component and deployment directories to build the code. The rebuild variant also runs `clean` and
+`gen_make` in order to ensure that all parts of the system ar up-to-date.
+
+```
+cd <component or topology>
+make # To re-generate autocode output and build code
+make rebuild # To clean, generate make system, and build code
+```
