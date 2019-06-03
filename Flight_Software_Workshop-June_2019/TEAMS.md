@@ -3,17 +3,19 @@
 These are the resource assignments for the FSW workshop. This should allow teams to access the private network for
 development for classes activities. 
 
-**WiFi SSID:** fprime-network
-**WiFi Password:** fpclass2019
+|---|---|
+|**WiFi SSID** | fprime-network |
+|**WiFi Password** | fpclass2019 |
 
 ## Development Computer
 
 Should teams wish to do development on the supplied computer that is pre-setup, they can access it at the following
 address.
 
-**IP Address:** 192.168.2.2
-**Username:** team*#*  (see below)
-**Password:** team*#*user (see below)
+|---|---|
+| **IP Address** | 192.168.2.2 |
+| **Username** | team#  (see below) |
+| **Password** | team#user (see below) |
 
 ### SSH
 
@@ -26,15 +28,17 @@ ssh team#@192.168.2.2
 
 Point vnc at the following address to use VNC on the gateway computer:
 
-VNC: 192.168.2.2:*##* (see VNC Display below for ##)
+|---|---|
+| **VNC URL | 192.168.2.2:## (see VNC Display below for ##) |
 
 ## Raspberry Pi
 
 Each team also has access to a rapberry PI. This can be accessed via WiFi during class hours, and directly after
 class via Ethernet.
 
-**PI User:** pi
-**PI Password: fpclass2019
+|---|---|
+| **PI User** | pi |
+| **PI Password | fpclass2019 |
 
 
 ### SSH
