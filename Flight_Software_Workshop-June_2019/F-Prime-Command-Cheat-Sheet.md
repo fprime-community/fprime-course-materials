@@ -83,6 +83,17 @@ make rpi_cross
 
 **Note:** this performs a cross-compile for the raspberry PI's architecture.
 
+## Raspberry PI UTs
+
+Some unit tests can only run on the raspberry pi (drivers etc.) The following commands can be used to cross-compile UTs for the raspberry pi, upload them and run them.
+
+```
+cd <component with rpi UT>
+make ut_raspian_cross
+scp test/ut/raspian-raspian-arm-debug-gnu-bin/test_ut pi@<team's RPI IP>:
+ssh pi@<team's RPI IP> "./test_ut"
+```
+
 ## Other Raspberry PI Commands
 
 This section includes command useful for interacting with the Raspberry PI for the purposes of the FSW workshop.
