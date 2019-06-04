@@ -4,6 +4,8 @@ This file seeks to give a quick reference for the development process used for t
 
 In order to add new ports into the system follow the following steps.
 
+**Note:** adding files below is easiest by copying from an existing port and editing it.
+
 1. Create a new port directory 
 2. Add `mod.mk` and `Makefile` to that directory
 3. Add port directory to `mk/configs/modules/modules.mk`
@@ -13,6 +15,8 @@ In order to add new ports into the system follow the following steps.
 7. In the port directory: `make` to autocode the port
 
 # Components
+
+**Note:** adding files below is easiest by copying from an existing component and editing it.
 
 1. Create a new component directory 
 2. Add `mod.mk` and `Makefile` to that directory
