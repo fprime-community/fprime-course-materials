@@ -23,3 +23,6 @@ In order to add new ports into the system follow the following steps.
 8. In the component directory: `make` to autocode the port
 9. Generate implementations using `make impl` in component directory
 10. Rename the generated `*-template` files to remove the `-template` suffix
+11. Add new `*Impl.cpp` and `*Impl.hpp` files to `mod.mk` in component directory
+12. `make gen_make` in component directory
+13. `make` in component directory
