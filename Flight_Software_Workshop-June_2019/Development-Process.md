@@ -13,6 +13,8 @@ In order to add new ports into the system follow the following steps.
 5. Add the `*Ai.xml` to `mod.mk` in port directory
 6. In the port directory: `make gen_make`
 7. In the port directory: `make` to autocode the port
+8. Add component dir to `RobotArm_APP_MODULES` in `mk/configs/modules/modules.mk`
+
 
 # Components
 
@@ -30,3 +32,39 @@ In order to add new ports into the system follow the following steps.
 11. Add new `*Impl.cpp` and `*Impl.hpp` files to `mod.mk` in component directory
 12. `make gen_make` in component directory
 13. `make` in component directory
+14. Add component dir to `RobotArm_APP_MODULES` in `mk/configs/modules/modules.mk`
+
+
+# Deployments
+
+1. Add the new deployment to the bottom of `mk/configs/modules/modules.mk`
+```
+DEPLOYMENTS = Ref acdev RPI RobotArm
+```
+2. Add deployment modules variable to `mk/configs/modules/modules.mk`
+```
+RobotArm_MODULES := \
+  \
+  $(RobotArm_APP_MODULES) \
+  ...
+  ... Text ommited, copy from RPI_MODULES
+  ...
+```
+3. Add `RobotArm_APP_MODULES` variable to `mk/configs/modules/modules.mk`
+```
+RobotArm_APP_MODULES :=
+```
+4. Make deployment directory at top level
+```
+mkdir RobotArm
+```
+5. Copy `Makefile` from another deployment like RPI
+```
+cp -r RPI/Makefile RobotArm
+```
+6. Change Deployment name in `RobotArm/Makefile`
+```
+...
+DEPLOYMENT = RobotArm
+```
+7.
