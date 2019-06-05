@@ -67,4 +67,4 @@ cp -r RPI/Makefile RobotArm
 ...
 DEPLOYMENT = RobotArm
 ```
-7.
+7. `make gen_make` in deployment directory
