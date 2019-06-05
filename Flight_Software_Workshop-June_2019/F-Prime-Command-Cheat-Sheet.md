@@ -3,6 +3,14 @@
 This is intended to be q quick reference for F prime commands needed for completeing the FSW workshop.  Further commands can be found
 in the F prime documentation and raspberry PI example.
 
+## Tutorial Example
+
+https://github.com/timcanham/fprime/tree/tutorial/RobotArm
+
+## Development Process Notes
+
+[Development-Process.md](Development-Process.md)
+
 ## Setup and Implementation Commands
 
 This section will cover commands that help setup the F prime build system, setup a new F prime module, and aid in implementation of F
