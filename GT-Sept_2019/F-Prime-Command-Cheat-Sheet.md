@@ -83,7 +83,7 @@ the binary at that ground system.
 **On Development PC**
 ```
 cd fprime/
-./Gds/run_deployment.sh -d <path/to/deployment> -n -p <team's port>
+./Gds/bin/run_deployment.sh -d <path/to/deployment> -n -p <team's port> -g html
 ```
 
 **On Raspbery PI Via SSH**
